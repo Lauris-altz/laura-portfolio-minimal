@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1200">
+  <rect width="600" height="1200" fill="#ededed"/>
+  <text x="300" y="590" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#777">YOUR PORTRAIT</text>
+  <text x="300" y="630" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#999">replace profile-placeholder.svg</text>
+</svg>
