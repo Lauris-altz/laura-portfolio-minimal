@@ -152,6 +152,7 @@ figure {
   gap: 10px;
   min-width: 0;
   height: 100%;
+  
 }
 
 .home-carousel {
@@ -508,7 +509,7 @@ figure {
   .home-carousel {
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 4;
   }
 
   .projects-layout {
