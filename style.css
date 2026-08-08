@@ -5,13 +5,16 @@
   font-style: normal;
   font-display: swap;
 }
+
 :root {
   --background: #ffffff;
   --text: #111111;
   --muted: #707070;
   --accent: #cec80a;
+
   --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-display: "Bethany Elingston", Georgia, serif;
+
   --page-padding: clamp(18px, 3vw, 46px);
   --header-height: 78px;
   --left-column: clamp(280px, 29vw, 470px);
@@ -54,12 +57,19 @@ figure {
   margin: 0;
 }
 
+
+/* =========================================
+   HEADER
+========================================= */
+
 .site-header {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 10;
+
   height: var(--header-height);
   padding: 0 var(--page-padding);
+
   background: var(--background);
 }
 
@@ -67,11 +77,14 @@ figure {
   position: absolute;
   top: 50%;
   left: var(--page-padding);
+
   display: grid;
   width: 38px;
   height: 38px;
   place-items: center;
+
   transform: translateY(-50%);
+
   font-size: 8px;
   letter-spacing: 0.05em;
 }
@@ -86,8 +99,10 @@ figure {
   position: absolute;
   top: 50%;
   left: 50%;
+
   display: flex;
   gap: clamp(22px, 4vw, 52px);
+
   transform: translate(-50%, -50%);
   white-space: nowrap;
 }
@@ -103,7 +118,10 @@ figure {
   color: var(--accent);
 }
 
-/* HOME */
+
+/* =========================================
+   HOME
+========================================= */
 
 .home-page {
   height: 100svh;
@@ -114,8 +132,13 @@ figure {
   display: grid;
   grid-template-columns: var(--left-column) minmax(0, 1fr);
   gap: var(--column-gap);
+
   height: 100svh;
-  padding: calc(var(--header-height) + 18px) var(--page-padding) 28px;
+
+  padding:
+    calc(var(--header-height) + 18px)
+    var(--page-padding)
+    28px;
 }
 
 .home-intro {
@@ -129,7 +152,9 @@ figure {
 
 .home-intro h1 {
   bottom: 61px;
+
   width: 100%;
+
   font-family: var(--font-display);
   font-size: clamp(54px, 6.4vw, 96px);
   font-weight: 400;
@@ -150,15 +175,17 @@ figure {
   display: grid;
   grid-template-rows: minmax(0, 1fr) auto;
   gap: 10px;
+
   min-width: 0;
   height: 100%;
-  
 }
 
 .home-carousel {
   position: relative;
+
   min-width: 0;
   min-height: 0;
+
   background: #f1f1f1;
 }
 
@@ -183,7 +210,10 @@ figure {
   line-height: 1.2;
 }
 
-/* PROJECTS */
+
+/* =========================================
+   PROJECTS / GALLERY
+========================================= */
 
 .projects-page {
   height: 100svh;
@@ -194,8 +224,13 @@ figure {
   display: grid;
   grid-template-columns: var(--left-column) minmax(0, 1fr);
   gap: var(--column-gap);
+
   height: 100svh;
-  padding: calc(var(--header-height) + 18px) var(--page-padding) 0;
+
+  padding:
+    calc(var(--header-height) + 18px)
+    var(--page-padding)
+    0;
 }
 
 .fixed-identity {
@@ -213,7 +248,9 @@ figure {
 .identity-bottom h1 {
   position: absolute;
   bottom: 61px;
+
   width: 100%;
+
   font-family: var(--font-display);
   font-size: clamp(54px, 6.4vw, 96px);
   font-weight: 400;
@@ -223,6 +260,7 @@ figure {
 .identity-bottom p {
   position: absolute;
   bottom: 28px;
+
   font-size: 13px;
 }
 
@@ -233,15 +271,19 @@ figure {
 
 .projects-scroll {
   height: calc(100svh - var(--header-height) - 18px);
+
   overflow-y: auto;
   overscroll-behavior: contain;
+
   padding: 0 0 70px;
+
   scrollbar-width: thin;
 }
 
 .project-archive-grid {
   display: flex;
   flex-direction: column;
+
   gap: clamp(52px, 7vw, 96px);
 }
 
@@ -252,6 +294,7 @@ figure {
 
 .archive-project img {
   width: 100%;
+
   object-fit: cover;
   background: #f1f1f1;
 }
@@ -263,6 +306,7 @@ figure {
 .archive-project-pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: clamp(18px, 2vw, 30px);
 }
 
@@ -281,6 +325,7 @@ figure {
 
 .project-entry__caption p {
   margin-top: 2px;
+
   color: var(--muted);
   font-size: 11px;
 }
@@ -289,7 +334,10 @@ figure {
   color: var(--accent);
 }
 
-/* INFO */
+
+/* =========================================
+   INFO
+========================================= */
 
 .info-with-photo {
   height: 100svh;
@@ -298,19 +346,29 @@ figure {
 
 .info-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(190px, 23vw, 340px);
+  grid-template-columns:
+    minmax(0, 1fr)
+    clamp(190px, 23vw, 340px);
+
   height: 100svh;
+
   padding-top: var(--header-height);
 }
 
 .info-content {
   height: calc(100svh - var(--header-height));
+
   overflow: hidden;
-  padding: 38px var(--page-padding) 28px;
+
+  padding:
+    38px
+    var(--page-padding)
+    28px;
 }
 
 .page-title {
   margin-bottom: 34px;
+
   font-family: var(--font-display);
   font-size: clamp(52px, 7vw, 92px);
   font-weight: 400;
@@ -320,7 +378,9 @@ figure {
 .info-section {
   display: grid;
   grid-template-columns: 180px minmax(0, 620px);
+
   gap: 40px;
+
   padding: 17px 0;
 }
 
@@ -357,17 +417,25 @@ figure {
   object-fit: cover;
 }
 
-/* PROJECT DETAIL */
+
+/* =========================================
+   PROJECT DETAIL
+========================================= */
 
 .project-page {
-  padding: calc(var(--header-height) + 58px) var(--page-padding) 70px;
+  padding:
+    calc(var(--header-height) + 58px)
+    var(--page-padding)
+    70px;
 }
 
 .project-header {
   display: grid;
   grid-template-columns: 1fr auto;
+
   gap: 40px;
   align-items: end;
+
   padding-bottom: 22px;
 }
 
@@ -391,18 +459,25 @@ figure {
 .project-copy {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: 50px;
+
   max-width: 900px;
+
   padding: 42px 0 58px;
 }
 
 .project-copy h2 {
   margin-bottom: 12px;
+
   font-size: 11px;
   font-weight: 400;
 }
 
-/* Generic project galleries */
+
+/* =========================================
+   GENERIC PROJECT GALLERY
+========================================= */
 
 .project-gallery > img,
 .project-gallery__pair {
@@ -411,84 +486,135 @@ figure {
 
 .project-gallery > img {
   width: 100%;
+
   aspect-ratio: 16 / 9;
+
   object-fit: cover;
 }
 
 .project-gallery__pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: 24px;
 }
 
 .project-gallery__pair img {
   width: 100%;
+
   aspect-ratio: 1 / 1;
+
   object-fit: cover;
 }
 
-/* La Sobremesa gallery */
 
-.project-gallery--sobremesa {
+/* =========================================
+   LA SOBREMESA GALLERY
+========================================= */
+
+.sobremesa-gallery {
   width: 100%;
 }
 
-.sobremesa-row {
-  display: grid;
-  width: 100%;
-  gap: 18px;
-}
+
+/* FILA 1
+   CAMI + VIDEO + REDES
+*/
 
 .sobremesa-row--top {
-  grid-template-columns: 1fr 1.7778fr 1fr;
-  align-items: stretch;
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1.7778fr
+    1fr;
+
+  gap: 18px;
+
+  width: 100%;
+
+  align-items: start;
+
   margin-bottom: 18px;
 }
 
-.sobremesa-square,
-.sobremesa-video {
+.sobremesa-square {
   display: block;
+
   width: 100%;
-  height: 100%;
+
+  aspect-ratio: 1 / 1;
+
   object-fit: cover;
 }
 
-.sobremesa-square {
-  aspect-ratio: 1 / 1;
+.sobremesa-video {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
 }
 
-.sobremesa-video {
-  aspect-ratio: 16 / 9;
-}
+
+/* FILA 2
+   MESA + MUPI
+*/
 
 .sobremesa-row--bottom {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: start;
-}
+  display: grid;
 
-.sobremesa-horizontal,
-.sobremesa-manual {
-  display: block;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+
   width: 100%;
-  aspect-ratio: 297 / 210;
+
+  margin-bottom: 32px;
 }
 
 .sobremesa-horizontal {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
   object-fit: cover;
 }
 
-.sobremesa-manual {
+
+/* =========================================
+   MANUAL LA SOBREMESA
+========================================= */
+
+.sobremesa-manual-carousel {
   position: relative;
+
+  width: 520px;
+  max-width: 100%;
+
+  aspect-ratio: 297 / 210;
+
   overflow: hidden;
+
+  margin: 0;
+
   background: #f1f1f1;
 }
 
 .manual-slide {
   position: absolute;
   inset: 0;
+
   display: none;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 }
 
@@ -496,9 +622,16 @@ figure {
   display: block;
 }
 
+
+/* =========================================
+   BACK
+========================================= */
+
 .back-link {
   display: inline-block;
+
   margin-top: 28px;
+
   font-size: 13px;
 }
 
@@ -506,21 +639,33 @@ figure {
   color: var(--accent);
 }
 
-/* TABLET */
+
+/* =========================================
+   TABLET
+========================================= */
 
 @media (max-width: 900px) {
+
   :root {
     --left-column: clamp(235px, 34vw, 340px);
     --column-gap: 28px;
   }
+
 }
 
-/* MOBILE */
+
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width: 650px) {
+
   :root {
     --header-height: 68px;
   }
+
+
+  /* HEADER */
 
   .logo-slot {
     width: 32px;
@@ -530,7 +675,9 @@ figure {
   .site-nav {
     right: var(--page-padding);
     left: auto;
+
     gap: 15px;
+
     transform: translateY(-50%);
   }
 
@@ -538,25 +685,37 @@ figure {
     font-size: 10px;
   }
 
+
+  /* PAGES */
+
   .home-page,
   .projects-page,
   .info-with-photo {
     height: auto;
     min-height: 100svh;
+
     overflow-y: auto;
   }
+
+
+  /* HOME */
 
   .home-main {
     display: flex;
     flex-direction: column;
+
     height: auto;
     min-height: 100svh;
-    padding-top: calc(var(--header-height) + 28px);
+
+    padding-top:
+      calc(var(--header-height) + 28px);
   }
 
   .home-intro {
     order: 2;
+
     min-height: 170px;
+
     margin-top: 24px;
   }
 
@@ -566,7 +725,9 @@ figure {
 
   .home-intro h1 {
     margin-bottom: 14px;
-    font-size: clamp(48px, 15vw, 68px);
+
+    font-size:
+      clamp(48px, 15vw, 68px);
   }
 
   .home-intro p + p {
@@ -575,6 +736,7 @@ figure {
 
   .home-featured {
     order: 1;
+
     width: 100%;
     height: auto;
   }
@@ -582,20 +744,29 @@ figure {
   .home-carousel {
     width: 100%;
     height: auto;
+
     aspect-ratio: 3 / 4;
   }
+
+
+  /* PROJECTS */
 
   .projects-layout {
     display: flex;
     flex-direction: column;
+
     height: auto;
-    padding-top: calc(var(--header-height) + 28px);
+
+    padding-top:
+      calc(var(--header-height) + 28px);
   }
 
   .fixed-identity {
     order: 2;
+
     height: auto;
     min-height: 170px;
+
     margin-top: 24px;
   }
 
@@ -611,7 +782,9 @@ figure {
 
   .identity-bottom h1 {
     margin-bottom: 14px;
-    font-size: clamp(48px, 15vw, 68px);
+
+    font-size:
+      clamp(48px, 15vw, 68px);
   }
 
   .identity-bottom p + p {
@@ -620,8 +793,11 @@ figure {
 
   .projects-scroll {
     order: 1;
+
     height: auto;
+
     overflow: visible;
+
     padding: 0 0 36px;
   }
 
@@ -641,38 +817,53 @@ figure {
     color: var(--accent);
   }
 
+
+  /* INFO */
+
   .info-layout {
     display: flex;
     flex-direction: column;
+
     height: auto;
+
     padding-top: var(--header-height);
   }
 
   .info-content {
     order: 1;
+
     height: auto;
+
     overflow: visible;
+
     padding-top: 42px;
   }
 
   .info-section {
     grid-template-columns: 1fr;
+
     gap: 14px;
   }
 
   .info-portrait {
     order: 2;
+
     width: 100%;
     height: 120vw;
     max-height: 720px;
   }
 
+
+  /* PROJECT DETAIL */
+
   .project-page {
-    padding-top: calc(var(--header-height) + 42px);
+    padding-top:
+      calc(var(--header-height) + 42px);
   }
 
   .project-header {
     grid-template-columns: 1fr;
+
     gap: 18px;
   }
 
@@ -682,6 +873,7 @@ figure {
 
   .project-copy {
     grid-template-columns: 1fr;
+
     gap: 28px;
   }
 
@@ -689,22 +881,36 @@ figure {
     grid-template-columns: 1fr;
   }
 
-  .sobremesa-row--top,
+
+  /* LA SOBREMESA */
+
+  .sobremesa-row--top {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
   .sobremesa-row--bottom {
     grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    margin-bottom: 24px;
   }
 
   .sobremesa-square {
     aspect-ratio: 1 / 1;
   }
 
-  .sobremesa-video {
+  .sobremesa-video,
+  .sobremesa-horizontal {
     aspect-ratio: 16 / 9;
-    height: auto;
   }
 
-  .sobremesa-horizontal,
-  .sobremesa-manual {
+  .sobremesa-manual-carousel {
+    width: 100%;
+
     aspect-ratio: 297 / 210;
   }
+
 }
