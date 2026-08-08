@@ -411,7 +411,13 @@ figure {
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
-
+.project-gallery-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
 
 .project-gallery__pair {
   display: grid;
