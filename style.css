@@ -402,21 +402,17 @@ figure {
   font-weight: 400;
 }
 
+/* Generic project galleries */
+
 .project-gallery > img,
 .project-gallery__pair {
   margin-bottom: 24px;
 }
 
 .project-gallery > img {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-.project-gallery-video {
-  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  margin-bottom: 24px;
 }
 
 .project-gallery__pair {
@@ -426,8 +422,78 @@ figure {
 }
 
 .project-gallery__pair img {
-  aspect-ratio: 1;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+}
+
+/* La Sobremesa gallery */
+
+.project-gallery--sobremesa {
+  width: 100%;
+}
+
+.sobremesa-row {
+  display: grid;
+  width: 100%;
+  gap: 18px;
+}
+
+.sobremesa-row--top {
+  grid-template-columns: 1fr 1.7778fr 1fr;
+  align-items: stretch;
+  margin-bottom: 18px;
+}
+
+.sobremesa-square,
+.sobremesa-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sobremesa-square {
+  aspect-ratio: 1 / 1;
+}
+
+.sobremesa-video {
+  aspect-ratio: 16 / 9;
+}
+
+.sobremesa-row--bottom {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+.sobremesa-horizontal,
+.sobremesa-manual {
+  display: block;
+  width: 100%;
+  aspect-ratio: 297 / 210;
+}
+
+.sobremesa-horizontal {
+  object-fit: cover;
+}
+
+.sobremesa-manual {
+  position: relative;
+  overflow: hidden;
+  background: #f1f1f1;
+}
+
+.manual-slide {
+  position: absolute;
+  inset: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manual-slide.is-active {
+  display: block;
 }
 
 .back-link {
@@ -621,5 +687,24 @@ figure {
 
   .project-gallery__pair {
     grid-template-columns: 1fr;
+  }
+
+  .sobremesa-row--top,
+  .sobremesa-row--bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .sobremesa-square {
+    aspect-ratio: 1 / 1;
+  }
+
+  .sobremesa-video {
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  .sobremesa-horizontal,
+  .sobremesa-manual {
+    aspect-ratio: 297 / 210;
   }
 }
