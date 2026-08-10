@@ -651,6 +651,35 @@ figure {
   object-fit: cover;
   display: block;
 }
+
+/* =========================
+   MÜNA GALLERY
+========================= */
+
+.muna-gallery {
+  width: 100%;
+}
+
+/* Las dos filas usan 3 columnas iguales */
+.muna-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+/* Separación entre las dos filas */
+.muna-row + .muna-row {
+  margin-top: 18px;
+}
+
+/* Todas las fotos ligeramente verticales */
+.muna-row img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
 /* =========================================
    BACK
 ========================================= */
@@ -688,6 +717,7 @@ figure {
 
 @media (max-width: 650px) {
 
+  
   .don-row {
     grid-template-columns: 1fr;
     gap: 14px;
@@ -698,7 +728,14 @@ figure {
     aspect-ratio: 16 / 9;
     object-fit: cover;
   }
+.muna-row {
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
 
+.muna-row + .muna-row {
+  margin-top: 14px;
+}
   :root {
     --header-height: 68px;
   }
