@@ -768,7 +768,24 @@ figure {
   :root {
     --header-height: 68px;
   }
+/* CATA LA LATA — MOBILE */
 
+.cata-gallery {
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.cata-slider {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.cata-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 
   /* HEADER */
@@ -1020,3 +1037,4 @@ figure {
   }
 
 }
+
