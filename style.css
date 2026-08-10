@@ -152,7 +152,6 @@ figure {
 
 .home-intro h1 {
   bottom: 61px;
-
   width: 100%;
 
   font-family: var(--font-display);
@@ -248,7 +247,6 @@ figure {
 .identity-bottom h1 {
   position: absolute;
   bottom: 61px;
-
   width: 100%;
 
   font-family: var(--font-display);
@@ -260,7 +258,6 @@ figure {
 .identity-bottom p {
   position: absolute;
   bottom: 28px;
-
   font-size: 13px;
 }
 
@@ -283,7 +280,6 @@ figure {
 .project-archive-grid {
   display: flex;
   flex-direction: column;
-
   gap: clamp(52px, 7vw, 96px);
 }
 
@@ -294,7 +290,6 @@ figure {
 
 .archive-project img {
   width: 100%;
-
   object-fit: cover;
   background: #f1f1f1;
 }
@@ -306,7 +301,6 @@ figure {
 .archive-project-pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-
   gap: clamp(18px, 2vw, 30px);
 }
 
@@ -325,7 +319,6 @@ figure {
 
 .project-entry__caption p {
   margin-top: 2px;
-
   color: var(--muted);
   font-size: 11px;
 }
@@ -351,13 +344,11 @@ figure {
     clamp(190px, 23vw, 340px);
 
   height: 100svh;
-
   padding-top: var(--header-height);
 }
 
 .info-content {
   height: calc(100svh - var(--header-height));
-
   overflow: hidden;
 
   padding:
@@ -378,9 +369,7 @@ figure {
 .info-section {
   display: grid;
   grid-template-columns: 180px minmax(0, 620px);
-
   gap: 40px;
-
   padding: 17px 0;
 }
 
@@ -461,7 +450,6 @@ figure {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
   gap: 50px;
-
   max-width: 900px;
 
   padding: 42px 0 58px;
@@ -469,7 +457,6 @@ figure {
 
 .project-copy h2 {
   margin-bottom: 12px;
-
   font-size: 11px;
   font-weight: 400;
 }
@@ -486,24 +473,19 @@ figure {
 
 .project-gallery > img {
   width: 100%;
-
   aspect-ratio: 16 / 9;
-
   object-fit: cover;
 }
 
 .project-gallery__pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-
   gap: 24px;
 }
 
 .project-gallery__pair img {
   width: 100%;
-
   aspect-ratio: 1 / 1;
-
   object-fit: cover;
 }
 
@@ -516,10 +498,6 @@ figure {
   width: 100%;
 }
 
-/* FILA 1
-   CAMI + VIDEO + REDES
-*/
-
 .sobremesa-row--top {
   display: grid;
 
@@ -529,59 +507,38 @@ figure {
     1fr;
 
   gap: 18px;
-
   width: 100%;
-
   align-items: start;
-
   margin-bottom: 18px;
 }
 
 .sobremesa-square {
   display: block;
-
   width: 100%;
-
   aspect-ratio: 1 / 1;
-
   object-fit: cover;
 }
 
 .sobremesa-video {
   display: block;
-
   width: 100%;
-
   aspect-ratio: 16 / 9;
-
   object-fit: cover;
 }
 
-
-/* FILA 2
-   MESA + MUPI
-*/
-
 .sobremesa-row--bottom {
   display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   gap: 18px;
-
   width: 100%;
-
   margin-bottom: 32px;
 }
 
 .sobremesa-horizontal {
   display: block;
-
   width: 100%;
-
   aspect-ratio: 16 / 9;
-
   object-fit: cover;
 }
 
@@ -597,7 +554,6 @@ figure {
   max-width: 100%;
 
   aspect-ratio: 297 / 210;
-
   overflow: hidden;
 
   margin: 0;
@@ -629,27 +585,26 @@ figure {
 .don-row {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
+
   gap: 18px;
   width: 100%;
   align-items: stretch;
 }
 
-/* CUADRADOS LATERALES */
-
 .don-square {
   width: 100%;
   height: 100%;
   aspect-ratio: auto;
+
   object-fit: cover;
   display: block;
 }
-
-/* VÍDEO CENTRAL */
 
 .don-video {
   width: 100%;
   aspect-ratio: 16 / 9;
   height: auto;
+
   object-fit: cover;
   display: block;
 }
@@ -666,6 +621,7 @@ figure {
 .muna-row {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+
   gap: 18px;
   width: 100%;
 }
@@ -677,6 +633,7 @@ figure {
 .muna-row img {
   display: block;
   width: 100%;
+
   aspect-ratio: 4 / 5;
   object-fit: cover;
 }
@@ -689,14 +646,17 @@ figure {
 .cata-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: 24px;
   width: 100%;
 }
 
 .cata-slider {
   position: relative;
+
   width: 100%;
   aspect-ratio: 4 / 3;
+
   overflow: hidden;
   background: #f1f1f1;
 }
@@ -709,7 +669,6 @@ figure {
   height: 100%;
 
   object-fit: cover;
-
   display: none;
 }
 
@@ -719,14 +678,69 @@ figure {
 
 
 /* =========================================
+   STARBUCKS IN NYC
+========================================= */
+
+.starbucks-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+  width: 100%;
+}
+
+.starbucks-hover {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 2 / 3;
+
+  overflow: hidden;
+  background: #f1f1f1;
+
+  cursor: pointer;
+}
+
+.starbucks-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.starbucks-image--first {
+  display: block;
+}
+
+.starbucks-image--second {
+  display: none;
+}
+
+/* En ordenador: al pasar el ratón aparece la segunda imagen */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .starbucks-hover:hover .starbucks-image--first {
+    display: none;
+  }
+
+  .starbucks-hover:hover .starbucks-image--second {
+    display: block;
+  }
+
+}
+
+
+/* =========================================
    BACK
 ========================================= */
 
 .back-link {
   display: inline-block;
-
   margin-top: 28px;
-
   font-size: 13px;
 }
 
@@ -788,7 +802,6 @@ figure {
   .info-with-photo {
     height: auto;
     min-height: 100svh;
-
     overflow-y: auto;
   }
 
@@ -808,9 +821,7 @@ figure {
 
   .home-intro {
     order: 2;
-
     min-height: 170px;
-
     margin-top: 24px;
   }
 
@@ -820,9 +831,7 @@ figure {
 
   .home-intro h1 {
     margin-bottom: 14px;
-
-    font-size:
-      clamp(48px, 15vw, 68px);
+    font-size: clamp(48px, 15vw, 68px);
   }
 
   .home-intro p + p {
@@ -831,7 +840,6 @@ figure {
 
   .home-featured {
     order: 1;
-
     width: 100%;
     height: auto;
   }
@@ -839,7 +847,6 @@ figure {
   .home-carousel {
     width: 100%;
     height: auto;
-
     aspect-ratio: 3 / 4;
   }
 
@@ -877,9 +884,7 @@ figure {
 
   .identity-bottom h1 {
     margin-bottom: 14px;
-
-    font-size:
-      clamp(48px, 15vw, 68px);
+    font-size: clamp(48px, 15vw, 68px);
   }
 
   .identity-bottom p + p {
@@ -890,7 +895,6 @@ figure {
     order: 1;
 
     height: auto;
-
     overflow: visible;
 
     padding: 0 0 36px;
@@ -920,7 +924,6 @@ figure {
     flex-direction: column;
 
     height: auto;
-
     padding-top: var(--header-height);
   }
 
@@ -928,7 +931,6 @@ figure {
     order: 1;
 
     height: auto;
-
     overflow: visible;
 
     padding-top: 42px;
@@ -936,7 +938,6 @@ figure {
 
   .info-section {
     grid-template-columns: 1fr;
-
     gap: 14px;
   }
 
@@ -958,7 +959,6 @@ figure {
 
   .project-header {
     grid-template-columns: 1fr;
-
     gap: 18px;
   }
 
@@ -968,7 +968,6 @@ figure {
 
   .project-copy {
     grid-template-columns: 1fr;
-
     gap: 28px;
   }
 
@@ -978,20 +977,40 @@ figure {
 
 
   /* =========================================
+     STARBUCKS — MOBILE
+  ========================================= */
+
+  .starbucks-gallery {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .starbucks-hover {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+  }
+
+  .starbucks-hover.is-flipped .starbucks-image--first {
+    display: none;
+  }
+
+  .starbucks-hover.is-flipped .starbucks-image--second {
+    display: block;
+  }
+
+
+  /* =========================================
      LA SOBREMESA — MOBILE
   ========================================= */
 
   .sobremesa-row--top {
     grid-template-columns: 1fr;
-
     gap: 14px;
   }
 
   .sobremesa-row--bottom {
     grid-template-columns: 1fr;
-
     gap: 14px;
-
     margin-bottom: 24px;
   }
 
@@ -1006,7 +1025,6 @@ figure {
 
   .sobremesa-manual-carousel {
     width: 100%;
-
     aspect-ratio: 297 / 210;
   }
 
@@ -1023,6 +1041,7 @@ figure {
   .don-square {
     width: 100%;
     height: auto;
+
     aspect-ratio: 1 / 1;
     object-fit: cover;
   }
@@ -1030,6 +1049,7 @@ figure {
   .don-video {
     width: 100%;
     height: auto;
+
     aspect-ratio: 16 / 9;
     object-fit: cover;
   }
@@ -1041,7 +1061,6 @@ figure {
 
   .muna-row {
     grid-template-columns: 1fr;
-
     gap: 14px;
   }
 
@@ -1056,7 +1075,6 @@ figure {
 
   .cata-gallery {
     display: grid;
-
     grid-template-columns: 1fr;
 
     gap: 20px;
@@ -1069,14 +1087,12 @@ figure {
 
   .cata-slider {
     width: 100%;
-
     aspect-ratio: 1 / 1;
   }
 
   .cata-slide {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
   }
 
