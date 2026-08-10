@@ -516,7 +516,6 @@ figure {
   width: 100%;
 }
 
-
 /* FILA 1
    CAMI + VIDEO + REDES
 */
@@ -622,6 +621,7 @@ figure {
   display: block;
 }
 
+
 /* =========================================
    DON REFRANOTE GALLERY
 ========================================= */
@@ -635,6 +635,7 @@ figure {
 }
 
 /* CUADRADOS LATERALES */
+
 .don-square {
   width: 100%;
   height: 100%;
@@ -644,6 +645,7 @@ figure {
 }
 
 /* VÍDEO CENTRAL */
+
 .don-video {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -652,15 +654,15 @@ figure {
   display: block;
 }
 
-/* =========================
+
+/* =========================================
    MÜNA GALLERY
-========================= */
+========================================= */
 
 .muna-gallery {
   width: 100%;
 }
 
-/* Las dos filas usan 3 columnas iguales */
 .muna-row {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -668,19 +670,21 @@ figure {
   width: 100%;
 }
 
-/* Separación entre las dos filas */
 .muna-row + .muna-row {
   margin-top: 18px;
 }
 
-/* Todas las fotos ligeramente verticales */
 .muna-row img {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
 }
-/* CATA LA LATA */
+
+
+/* =========================================
+   CATA LA LATA
+========================================= */
 
 .cata-gallery {
   display: grid;
@@ -700,15 +704,20 @@ figure {
 .cata-slide {
   position: absolute;
   inset: 0;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+
   display: none;
 }
 
 .cata-slide.is-active {
   display: block;
 }
+
+
 /* =========================================
    BACK
 ========================================= */
@@ -746,46 +755,9 @@ figure {
 
 @media (max-width: 650px) {
 
-  
-  .don-row {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .don-video {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-  }
-.muna-row {
-  grid-template-columns: 1fr;
-  gap: 14px;
-}
-
-.muna-row + .muna-row {
-  margin-top: 14px;
-}
   :root {
     --header-height: 68px;
   }
-/* CATA LA LATA — MOBILE */
-
-.cata-gallery {
-  grid-template-columns: 1fr;
-  gap: 20px;
-  width: 100%;
-}
-
-.cata-slider {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-}
-
-.cata-slide {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 
   /* HEADER */
@@ -1005,7 +977,9 @@ figure {
   }
 
 
-  /* LA SOBREMESA */
+  /* =========================================
+     LA SOBREMESA — MOBILE
+  ========================================= */
 
   .sobremesa-row--top {
     grid-template-columns: 1fr;
@@ -1036,5 +1010,74 @@ figure {
     aspect-ratio: 297 / 210;
   }
 
-}
 
+  /* =========================================
+     DON REFRANOTE — MOBILE
+  ========================================= */
+
+  .don-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .don-square {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .don-video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+
+  /* =========================================
+     MÜNA — MOBILE
+  ========================================= */
+
+  .muna-row {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .muna-row + .muna-row {
+    margin-top: 14px;
+  }
+
+
+  /* =========================================
+     CATA LA LATA — MOBILE
+  ========================================= */
+
+  .cata-gallery {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    width: calc(100% + (var(--page-padding) * 2));
+
+    margin-left:
+      calc(var(--page-padding) * -1);
+  }
+
+  .cata-slider {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+  }
+
+  .cata-slide {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+}
