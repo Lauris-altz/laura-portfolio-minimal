@@ -7,6 +7,7 @@
   <title>Cata la lata — Laura Altozano</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="site-header">
     <a class="logo-slot" href="index.html" aria-label="Laura Altozano — Home">
@@ -32,27 +33,49 @@
     <section class="project-copy">
       <div>
         <h2>EN</h2>
-        <p>La Sobremesa is a cultural brand that reinterprets Spanish popular heritage through contemporary board games and graphic design. This is provisional text that you can replace later.</p>
-      </div>
+        <p>Packaging proposal for the “Cata la Lata” canned seafood competition, featuring mussels, sardines and tuna. The idea behind the project is to create a consistent visual style across all three packages.</div>
       <div>
         <h2>ES</h2>
-        <p>La Sobremesa es una marca cultural que reinterpreta el patrimonio popular español mediante juegos de mesa contemporáneos y diseño gráfico. Este texto es provisional y podrás cambiarlo más adelante.</p>
-      </div>
+        <p>Propuesta de packaging para el concurso “Cata la Lata” de conservas de mejillones, sardinas y atún. La idea del proyecto es crear una misma línea visual para los tres envases.</div>
     </section>
 
-    <section class="project-gallery">
-      <img src="assets/images/project-01.svg" alt="Main project image placeholder">
-      <div class="project-gallery__pair">
-        <img src="assets/images/project-04.svg" alt="Project image placeholder">
-        <img src="assets/images/project-05.svg" alt="Project image placeholder">
-      </div>
-      <div class="project-gallery__pair">
-        <img src="assets/images/project-06.svg" alt="Project image placeholder">
-        <img src="assets/images/project-07.svg" alt="Project image placeholder">
-      </div>
-    </section>
+    <section class="project-gallery cata-gallery">
 
-    <a class="back-link" href="projects.html">← Back to Projects</a>
+  <!-- RECTÁNGULO IZQUIERDO -->
+  <div class="cata-slider">
+    <img class="cata-slide is-active"
+         src="assets/images/sardinas.jpg"
+         alt="Cata la Lata">
+
+    <img class="cata-slide"
+         src="assets/images/mejillones.jpg"
+         alt="Cata la Lata">
+
+    <img class="cata-slide"
+         src="assets/images/atun.jpg"
+         alt="Cata la Lata">
+  </div>
+
+
+  <!-- RECTÁNGULO DERECHO -->
+  <div class="cata-slider">
+    <img class="cata-slide is-active"
+         src="assets/images/sardinas2.jpg"
+         alt="Cata la Lata">
+
+    <img class="cata-slide"
+         src="assets/images/mejillones2.jpg"
+         alt="Cata la Lata">
+
+    <img class="cata-slide"
+         src="assets/images/atun2.jpg"
+         alt="Cata la Lata">
+  </div>
+
+</section>
+
+<a class="back-link" href="projects.html">← Back to Projects</a>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>

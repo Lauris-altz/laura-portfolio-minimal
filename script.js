@@ -37,3 +37,21 @@ if (manualCarousel) {
     }, 3000);
   }
 }
+/* CATA LA LATA SLIDERS */
+
+const cataSliders = document.querySelectorAll(".cata-slider");
+
+cataSliders.forEach((slider) => {
+  const images = slider.querySelectorAll(".cata-slide");
+  let currentImage = 0;
+
+  if (images.length > 1) {
+    setInterval(() => {
+      images[currentImage].classList.remove("is-active");
+
+      currentImage = (currentImage + 1) % images.length;
+
+      images[currentImage].classList.add("is-active");
+    }, 3000);
+  }
+});
