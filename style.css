@@ -1411,33 +1411,35 @@ figure {
 
 
   .home-featured {
-    order: 1;
+  order: 1;
 
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: center;
 
-    width: 100%;
-    height: auto;
-  }
-
-
-  .home-gif {
-    width: 82%;
-    max-width: none;
-    max-height: none;
-
-    margin-left: auto;
-  }
+  width: 100%;
+  height: auto;
+}
 
 
-  .home-gif img {
-    width: 100%;
-    height: auto;
-    max-height: none;
+.home-gif {
+  width: 100%;
+  height: auto;
 
-    object-fit: contain;
-  }
+  aspect-ratio: 16 / 11;
+
+  overflow: hidden;
+}
+
+
+.home-gif img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
 
 
   /* PROJECTS */
