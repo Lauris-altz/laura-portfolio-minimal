@@ -1,50 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Laura Altozano, Graphic & Multimedia Designer based in Madrid.">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Portfolio of Laura Altozano, Graphic & Multimedia Designer based in Madrid."
+  >
+
   <title>Laura Altozano — Portfolio</title>
+
   <link rel="stylesheet" href="style.css">
+
   <script src="script.js" defer></script>
 </head>
-<body class="home-page">
-  <header class="site-header">
-    <a class="logo-slot" href="index.html" aria-label="Laura Altozano — Home">
-  <img src="assets/images/logo.png" alt="Laura Altozano">
-</a>
 
-    <nav class="site-nav" aria-label="Main navigation">
-      <a class="is-active" href="index.html">Home</a>
-      <a href="projects.html">Gallery</a>
-      <a href="info.html">Info</a>
+
+<body class="home-page">
+
+
+  <!-- =========================================
+       INTRO
+  ========================================= -->
+
+  <div
+    class="intro-screen"
+    id="introScreen"
+    aria-hidden="true"
+  >
+
+    <p class="intro-typing">
+
+      <span id="introPrefix"></span>
+
+      <span class="intro-name-line">
+  <span
+    id="introName"
+    class="intro-name"
+  ></span><span
+    class="intro-cursor"
+    aria-hidden="true"
+  ></span>
+</span>
+
+    </p>
+
+  </div>
+
+
+
+  <!-- =========================================
+       HEADER
+  ========================================= -->
+
+  <header class="site-header">
+
+    <a
+      class="logo-slot"
+      href="index.html"
+      aria-label="Laura Altozano — Home"
+    >
+      <img
+        src="assets/images/logo.png"
+        alt="Laura Altozano"
+      >
+    </a>
+
+
+    <nav
+      class="site-nav"
+      aria-label="Main navigation"
+    >
+
+      <a
+        class="is-active"
+        href="index.html"
+      >
+        Home
+      </a>
+
+      <a href="projects.html">
+        Gallery
+      </a>
+
+      <a href="info.html">
+        Info
+      </a>
+
     </nav>
+
   </header>
 
+
+
+  <!-- =========================================
+       HOME
+  ========================================= -->
+
   <main class="home-main">
-    <section class="home-intro" aria-labelledby="home-title">
-      <h1 id="home-title">Laura Altozano</h1>
-      <p>Graphic &amp; Multimedia Designer</p>
-      <p>Madrid, Spain</p>
+
+
+    <!-- LEFT -->
+    <section
+      class="home-intro"
+      aria-labelledby="home-title"
+    >
+
+      <h1 id="home-title">
+        Laura Altozano
+      </h1>
+
+      <p>
+        Graphic &amp; Multimedia Designer
+      </p>
+
+      <p>
+        Madrid, Spain
+      </p>
+
     </section>
 
-    <section class="home-featured" aria-label="Featured projects" data-carousel>
+
+
+    <!-- FEATURED PROJECTS -->
+    <section
+      class="home-featured"
+      aria-label="Featured projects"
+      data-carousel
+    >
+
       <div class="home-carousel">
-        <a class="carousel-slide is-active" href="la-sobremesa.html" data-slide data-project-name="La Sobremesa">
-          <img src="assets/images/project-01.svg" alt="La Sobremesa project placeholder">
+
+
+        <!-- LA SOBREMESA -->
+        <a
+          class="carousel-slide is-active"
+          href="la-sobremesa.html"
+          data-slide
+          data-project-name="La Sobremesa"
+        >
+
+          <img
+            src="assets/images/project-01.svg"
+            alt="La Sobremesa project"
+          >
+
         </a>
 
-        <a class="carousel-slide" href="don-refranote.html" data-slide data-project-name="Don Refranote">
-          <img src="assets/images/project-02.svg" alt="Don Refranote project placeholder">
+
+
+        <!-- DON REFRANOTE -->
+        <a
+          class="carousel-slide"
+          href="don-refranote.html"
+          data-slide
+          data-project-name="Don Refranote"
+        >
+
+          <img
+            src="assets/images/project-02.svg"
+            alt="Don Refranote project"
+          >
+
         </a>
 
-        <a class="carousel-slide" href="cata-la-lata.html" data-slide data-project-name="Photography Series">
-          <img src="assets/images/project-03.svg" alt="Photography project placeholder">
+
+
+        <!-- CATA LA LATA -->
+        <a
+          class="carousel-slide"
+          href="cata-la-lata.html"
+          data-slide
+          data-project-name="Cata la Lata"
+        >
+
+          <img
+            src="assets/images/project-03.svg"
+            alt="Cata la Lata project"
+          >
+
         </a>
+
       </div>
 
-      <p class="carousel-project-name" data-project-label>La Sobremesa</p>
+
+      <p
+        class="carousel-project-name"
+        data-project-label
+      >
+        La Sobremesa
+      </p>
+
     </section>
+
   </main>
+
 </body>
+
 </html>

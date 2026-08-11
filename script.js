@@ -14,7 +14,6 @@ const projectLabel =
 
 let currentSlide = 0;
 
-
 if (slides.length > 1) {
 
   window.setInterval(() => {
@@ -48,7 +47,6 @@ if (slides.length > 1) {
 const manualCarousel =
   document.querySelector("[data-manual-carousel]");
 
-
 if (manualCarousel) {
 
   const manualSlides = Array.from(
@@ -58,7 +56,6 @@ if (manualCarousel) {
   );
 
   let currentManualSlide = 0;
-
 
   if (manualSlides.length > 1) {
 
@@ -90,14 +87,12 @@ if (manualCarousel) {
 const cataSliders =
   document.querySelectorAll(".cata-slider");
 
-
 cataSliders.forEach((slider) => {
 
   const images =
     slider.querySelectorAll(".cata-slide");
 
   let currentImage = 0;
-
 
   if (images.length > 1) {
 
@@ -132,7 +127,6 @@ const starbucksHoverItems =
     "[data-starbucks-hover]"
   );
 
-
 starbucksHoverItems.forEach((item) => {
 
   item.addEventListener("click", () => {
@@ -162,7 +156,6 @@ starbucksHoverItems.forEach((item) => {
 
 const turkiyeReader =
   document.querySelector("[data-turkiye-reader]");
-
 
 if (turkiyeReader) {
 
@@ -219,11 +212,15 @@ if (turkiyeReader) {
     0–23 = una página cada vez
   */
 
+
   let desktopSpreadIndex = 0;
   let mobilePageIndex = 0;
 
+
   let previousMobileMode =
-    window.matchMedia("(max-width: 650px)").matches;
+    window.matchMedia(
+      "(max-width: 650px)"
+    ).matches;
 
 
   function isMobile() {
@@ -289,7 +286,10 @@ if (turkiyeReader) {
 
     /* BACK COVER */
 
-    if (desktopSpreadIndex === totalStates - 1) {
+    if (
+      desktopSpreadIndex ===
+      totalStates - 1
+    ) {
 
       spread.classList.add("is-single");
 
@@ -300,7 +300,8 @@ if (turkiyeReader) {
 
       rightSlot.hidden = true;
 
-      counter.textContent = "Back cover";
+      counter.textContent =
+        "Back cover";
 
       return;
 
@@ -313,16 +314,6 @@ if (turkiyeReader) {
 
     rightSlot.hidden = false;
 
-
-    /*
-      Spread 1:
-      pages[1] + pages[2]
-
-      Spread 2:
-      pages[3] + pages[4]
-
-      etc.
-    */
 
     const leftPageIndex =
       1 + ((desktopSpreadIndex - 1) * 2);
@@ -342,15 +333,8 @@ if (turkiyeReader) {
     );
 
 
-    const visualLeftPage =
-      leftPageIndex;
-
-    const visualRightPage =
-      rightPageIndex;
-
-
     counter.textContent =
-      `${visualLeftPage} — ${visualRightPage} / 22`;
+      `${leftPageIndex} — ${rightPageIndex} / 22`;
 
   }
 
@@ -374,13 +358,16 @@ if (turkiyeReader) {
 
     if (mobilePageIndex === 0) {
 
-      counter.textContent = "Cover";
+      counter.textContent =
+        "Cover";
 
     } else if (
-      mobilePageIndex === pages.length - 1
+      mobilePageIndex ===
+      pages.length - 1
     ) {
 
-      counter.textContent = "Back cover";
+      counter.textContent =
+        "Back cover";
 
     } else {
 
@@ -417,14 +404,17 @@ if (turkiyeReader) {
 
   function changePage(direction) {
 
-    spread.classList.add("is-turning");
+    spread.classList.add(
+      "is-turning"
+    );
 
 
     window.setTimeout(() => {
 
       if (isMobile()) {
 
-        mobilePageIndex += direction;
+        mobilePageIndex +=
+          direction;
 
 
         if (mobilePageIndex < 0) {
@@ -436,7 +426,8 @@ if (turkiyeReader) {
 
 
         if (
-          mobilePageIndex >= pages.length
+          mobilePageIndex >=
+          pages.length
         ) {
 
           mobilePageIndex = 0;
@@ -448,17 +439,22 @@ if (turkiyeReader) {
 
       } else {
 
-        desktopSpreadIndex += direction;
+        desktopSpreadIndex +=
+          direction;
 
 
-        if (desktopSpreadIndex < 0) {
+        if (
+          desktopSpreadIndex < 0
+        ) {
 
           desktopSpreadIndex = 12;
 
         }
 
 
-        if (desktopSpreadIndex > 12) {
+        if (
+          desktopSpreadIndex > 12
+        ) {
 
           desktopSpreadIndex = 0;
 
@@ -483,24 +479,32 @@ if (turkiyeReader) {
      BUTTONS
   ========================================= */
 
-  previousButton.addEventListener(
-    "click",
-    () => {
+  if (previousButton) {
 
-      changePage(-1);
+    previousButton.addEventListener(
+      "click",
+      () => {
 
-    }
-  );
+        changePage(-1);
+
+      }
+    );
+
+  }
 
 
-  nextButton.addEventListener(
-    "click",
-    () => {
+  if (nextButton) {
 
-      changePage(1);
+    nextButton.addEventListener(
+      "click",
+      () => {
 
-    }
-  );
+        changePage(1);
+
+      }
+    );
+
+  }
 
 
   /* =========================================
@@ -511,14 +515,18 @@ if (turkiyeReader) {
     "keydown",
     (event) => {
 
-      if (event.key === "ArrowLeft") {
+      if (
+        event.key === "ArrowLeft"
+      ) {
 
         changePage(-1);
 
       }
 
 
-      if (event.key === "ArrowRight") {
+      if (
+        event.key === "ArrowRight"
+      ) {
 
         changePage(1);
 
@@ -536,16 +544,13 @@ if (turkiyeReader) {
     "resize",
     () => {
 
-      const mobileMode = isMobile();
+      const mobileMode =
+        isMobile();
 
-
-      /*
-        Only rerender when crossing
-        desktop/mobile breakpoint.
-      */
 
       if (
-        mobileMode !== previousMobileMode
+        mobileMode !==
+        previousMobileMode
       ) {
 
         previousMobileMode =
@@ -565,5 +570,111 @@ if (turkiyeReader) {
   /* FIRST RENDER */
 
   renderTurkiyeReader();
+
+}
+
+
+/* =========================================
+   HOME INTRO
+========================================= */
+
+const introScreen =
+  document.getElementById(
+    "introScreen"
+  );
+
+const introPrefix =
+  document.getElementById(
+    "introPrefix"
+  );
+
+const introName =
+  document.getElementById(
+    "introName"
+  );
+
+
+if (
+  introScreen &&
+  introPrefix &&
+  introName
+) {
+
+  const prefixText =
+  "";
+
+const nameText =
+  "Welcome to my portfolio :)";
+
+  let prefixIndex = 0;
+  let nameIndex = 0;
+
+
+  function typePrefix() {
+
+    if (
+      prefixIndex <
+      prefixText.length
+    ) {
+
+      introPrefix.textContent +=
+        prefixText.charAt(
+          prefixIndex
+        );
+
+      prefixIndex++;
+
+      window.setTimeout(
+        typePrefix,
+        85
+      );
+
+    } else {
+
+      typeName();
+
+    }
+
+  }
+
+
+  function typeName() {
+
+    if (
+      nameIndex <
+      nameText.length
+    ) {
+
+      introName.textContent +=
+        nameText.charAt(
+          nameIndex
+        );
+
+      nameIndex++;
+
+      window.setTimeout(
+        typeName,
+        85
+      );
+
+    } else {
+
+      window.setTimeout(() => {
+
+        introScreen.classList.add(
+          "is-hidden"
+        );
+
+      }, 1150);
+
+    }
+
+  }
+
+
+  window.setTimeout(
+    typePrefix,
+    250
+  );
 
 }
