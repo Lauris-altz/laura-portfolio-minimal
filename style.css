@@ -1322,9 +1322,28 @@ figure {
   /* HOME INTRO Ã¢â‚¬â€ MOBILE */
 
   .intro-typing {
-    font-size: clamp(30px, 9vw, 46px);
-  }
+  width: 100%;
+  padding: 0 28px;
 
+  justify-content: center;
+
+  font-size: clamp(38px, 11vw, 52px);
+  line-height: 0.95;
+
+  white-space: normal;
+}
+
+.intro-name-line {
+  display: block;
+
+  width: 11ch;
+
+  white-space: normal;
+  text-align: left;
+}
+.intro-name {
+  white-space: pre-line;
+}
   /* HEADER */
 
   .logo-slot {
