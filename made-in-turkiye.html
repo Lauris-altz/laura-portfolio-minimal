@@ -1,58 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Made in Türkiye project by Laura Altozano.">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Made in Türkiye editorial photography project by Laura Altozano."
+  >
+
   <title>Made in Türkiye — Laura Altozano</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="site-header">
-    <a class="logo-slot" href="index.html" aria-label="Laura Altozano — Home">
-  <img src="assets/images/logo.png" alt="Laura Altozano">
-</a>
 
-    <nav class="site-nav" aria-label="Main navigation">
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <a
+      class="logo-slot"
+      href="index.html"
+      aria-label="Laura Altozano — Home"
+    >
+      <img
+        src="assets/images/logo.png"
+        alt="Laura Altozano"
+      >
+    </a>
+
+
+    <nav
+      class="site-nav"
+      aria-label="Main navigation"
+    >
       <a href="index.html">Home</a>
-      <a class="is-active" href="projects.html">Gallery</a>
+
+      <a
+        class="is-active"
+        href="projects.html"
+      >
+        Gallery
+      </a>
+
       <a href="info.html">Info</a>
     </nav>
+
   </header>
 
+
+  <!-- PROJECT -->
   <main class="project-page">
+
+
+    <!-- TITLE -->
     <section class="project-header">
+
       <h1>Made in Türkiye</h1>
+
       <div class="project-meta">
-        <p>Book · Photography</p>
+        <p>Editorial · Photography</p>
         <p>2023</p>
       </div>
+
     </section>
 
+
+    <!-- DESCRIPTION -->
     <section class="project-copy">
+
       <div>
         <h2>EN</h2>
-        <p>La Sobremesa is a cultural brand that reinterprets Spanish popular heritage through contemporary board games and graphic design. This is provisional text that you can replace later.</p>
+
+        <p>
+          Made in Türkiye is an editorial and photographic project
+          developed as a visual journey through Türkiye. The publication
+          combines photography and editorial design to build a personal
+          visual narrative through its pages.
+        </p>
       </div>
+
+
       <div>
         <h2>ES</h2>
-        <p>La Sobremesa es una marca cultural que reinterpreta el patrimonio popular español mediante juegos de mesa contemporáneos y diseño gráfico. Este texto es provisional y podrás cambiarlo más adelante.</p>
+
+        <p>
+          Made in Türkiye es un proyecto editorial y fotográfico
+          desarrollado como un recorrido visual por Turquía. La
+          publicación combina fotografía y diseño editorial para
+          construir una narración visual personal a través de sus páginas.
+        </p>
       </div>
+
     </section>
 
-    <section class="project-gallery">
-      <img src="assets/images/project-01.svg" alt="Main project image placeholder">
-      <div class="project-gallery__pair">
-        <img src="assets/images/project-04.svg" alt="Project image placeholder">
-        <img src="assets/images/project-05.svg" alt="Project image placeholder">
+
+    <!-- MAGAZINE VIEWER -->
+    <section class="turkiye-gallery">
+
+      <div
+        class="turkiye-reader"
+        data-turkiye-reader
+      >
+
+        <!-- PREVIOUS -->
+        <button
+          class="turkiye-arrow turkiye-arrow--prev"
+          type="button"
+          aria-label="Previous page"
+          data-turkiye-prev
+        >
+          ←
+        </button>
+
+
+        <!-- PAGES -->
+        <div
+          class="turkiye-spread is-single"
+          data-turkiye-spread
+        >
+
+          <!-- LEFT / SINGLE PAGE -->
+          <div
+            class="turkiye-page-slot turkiye-page-slot--left"
+            data-turkiye-left-slot
+          >
+            <img
+              src="assets/images/turkiye-portada.jpg"
+              alt="Made in Türkiye cover"
+              data-turkiye-left-image
+            >
+          </div>
+
+
+          <!-- RIGHT PAGE -->
+          <div
+            class="turkiye-page-slot turkiye-page-slot--right"
+            data-turkiye-right-slot
+          >
+            <img
+              src=""
+              alt=""
+              data-turkiye-right-image
+            >
+          </div>
+
+        </div>
+
+
+        <!-- NEXT -->
+        <button
+          class="turkiye-arrow turkiye-arrow--next"
+          type="button"
+          aria-label="Next page"
+          data-turkiye-next
+        >
+          →
+        </button>
+
       </div>
-      <div class="project-gallery__pair">
-        <img src="assets/images/project-06.svg" alt="Project image placeholder">
-        <img src="assets/images/project-07.svg" alt="Project image placeholder">
+
+
+      <!-- COUNTER -->
+      <p
+        class="turkiye-counter"
+        data-turkiye-counter
+      >
+        Cover
+      </p>
+
+
+      <!--
+        FUENTE DE LAS 24 PÁGINAS.
+        Esta parte no se ve.
+        El JavaScript utiliza estas imágenes para construir la revista.
+      -->
+      <div
+        class="turkiye-page-data"
+        aria-hidden="true"
+      >
+
+        <!-- COVER -->
+        <img
+          src="assets/images/turkiye-portada.jpg"
+          alt="Made in Türkiye cover"
+          data-turkiye-source
+        >
+
+
+        <!-- 22 INTERIOR PAGES -->
+
+        <img
+          src="assets/images/turkiye-01.PNG"
+          alt="Made in Türkiye page 1"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-02.PNG"
+          alt="Made in Türkiye page 2"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-03.PNG"
+          alt="Made in Türkiye page 3"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-04.PNG"
+          alt="Made in Türkiye page 4"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-05.PNG"
+          alt="Made in Türkiye page 5"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-06.PNG"
+          alt="Made in Türkiye page 6"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-07.PNG"
+          alt="Made in Türkiye page 7"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-08.PNG"
+          alt="Made in Türkiye page 8"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-09.PNG"
+          alt="Made in Türkiye page 9"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-10.PNG"
+          alt="Made in Türkiye page 10"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-11.PNG"
+          alt="Made in Türkiye page 11"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-12.PNG"
+          alt="Made in Türkiye page 12"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-13.PNG"
+          alt="Made in Türkiye page 13"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-14.PNG"
+          alt="Made in Türkiye page 14"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-15.PNG"
+          alt="Made in Türkiye page 15"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-16.PNG"
+          alt="Made in Türkiye page 16"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-17.PNG"
+          alt="Made in Türkiye page 17"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-18.PNG"
+          alt="Made in Türkiye page 18"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-19.PNG"
+          alt="Made in Türkiye page 19"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-20.PNG"
+          alt="Made in Türkiye page 20"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-21.PNG"
+          alt="Made in Türkiye page 21"
+          data-turkiye-source
+        >
+
+        <img
+          src="assets/images/turkiye-22.PNG"
+          alt="Made in Türkiye page 22"
+          data-turkiye-source
+        >
+
+
+        <!-- BACK COVER -->
+        <img
+          src="assets/images/turkiye-22.PNG"
+          alt="Made in Türkiye back cover"
+          data-turkiye-source
+        >
+
       </div>
+
     </section>
 
-    <a class="back-link" href="projects.html">← Back to Projects</a>
+
+    <!-- BACK -->
+    <a
+      class="back-link"
+      href="projects.html"
+    >
+      ← Back to Projects
+    </a>
+
   </main>
+
+
+  <script src="script.js"></script>
+
 </body>
+
 </html>
