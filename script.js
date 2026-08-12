@@ -567,7 +567,9 @@ if (
   "";
 
 const nameText =
-  "Welcome to my portfolio :)";
+window.matchMedia("(max-width: 650px)").matches
+  ? "Welcome to my\nportfolio :)"
+  : "Welcome to my portfolio :)";
 
   let prefixIndex = 0;
   let nameIndex = 0;
